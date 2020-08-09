@@ -20,19 +20,19 @@
             |
             <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
         </div>
-        <button type="submit" class="btn btn-info">Save</button>
-        <button type="button" class="btn btn-danger">Delete</button>
+        <button type="submit" class="btn-success btn btn-info">Save</button>
+        <button type="button" class="delete-post-btn btn btn-danger">Delete</button>
     </form>
     <hr color="#17a2b8">
     <h2>New Comment</h2>
-    <form>
+    <form class="comment-form">
         <div class="form-row">
             <div class="form-group col-sm-12">
                 <label for="comment-body">Comment</label>
                 <textarea name="comment-body" class="form-control" rows="3" cols="135" placeholder="Enter Your Comment"></textarea>
             </div>
         </div>
-        <button type="submit" class="btn btn-info">Save</button>
+        <button type="submit" class="btn-success btn btn-info">Save</button>
     </form>
     </section>
     <hr color="#17a2b8">
