@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Bloggers Central</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>
+                <a href="/">Tech Bloggers Central</a>
+            </h1>
+            <nav>
+                <a href="/">Home</a>
+                {{#if loggedIn}}
+                <a href="/dashboard">Dashboard</a>
+                <button id="logout" class="btn-no-style">Logout</button>
+                {{else}}
+                <a href="/login">Login</a>
+                <a href="/signup">Sign up</a>
+                {{/if}}
+            </nav>
+        </header>
+        <main>
+            {{{ body }}}
+        </main>
+    </div>
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>

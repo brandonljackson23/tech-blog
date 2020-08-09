@@ -1,0 +1,16 @@
+<section>
+    <h2>Recent Posts</h2>
+    <div id="homepage">
+        <ol>
+            {{#each posts as |post|}}
+            <li>
+                {{> post-info post }}
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+</section>
+
+{{#if loggedIn}}
+<h3><a href="/dashboard"> Create a Post</a></h3>
+{{/if}}
