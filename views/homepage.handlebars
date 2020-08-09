@@ -1,13 +1,13 @@
 <section>
     <h2>Recent Posts</h2>
     <div id="homepage">
-        <ol>
+        <ul class="list-group">
             {{#each posts as |post|}}
-            <li>
+            <li class="list-group-item list-group-item-info">
                 {{> post-info post }}
             </li>
             {{/each}}
-        </ol>
+        </ul>
     </div>
 </section>
 

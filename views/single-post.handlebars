@@ -1,19 +1,29 @@
-{{> post-info post }}
+<section>
+    <h2>Post</h2>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-info">
+            {{> post-info post }}
+        </li>
+    </ul>
+</section>
 
 {{#if loggedIn}}
+<hr color="#17a2b8">
+<h2>New Comment</h2>
 <form>
-    <h2>Add Comment</h2>
-    <div>
-        <label for="comment-body">Comment</label>
-        <textarea name="comment-body"></textarea>
+    <div class="form-row">
+        <div class="form-group col-sm-12">
+            <label for="comment-body">Comment</label>
+            <textarea name="comment-body" class="form-control" rows="3" cols="135" placeholder="Enter Your Comment"></textarea>
+        </div>
     </div>
-    <div>
-        <button type="submit">Save</button>
-    </div>
+    <button type="submit" class="btn btn-info">Save</button>
 </form>
-
-{{/if}}
-{{> comments post.comments}}
-{{#if loggedIn}}
+</section>
+<hr color="#17a2b8">
+<section>
+    <h2>Comments</h2>
+    {{> comments post.comments }}
+</section>
 <script src="/javascript/comment.js"></script>
 {{/if}}
